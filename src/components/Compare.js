@@ -110,7 +110,7 @@ function Compare({data}) {
       <div>
         <h2 style={{paddingBottom:"20px"}}>Comparing Stats</h2>
         <Grid container justify="center" spacing={4}>
-          <Grid container xs={4} justify="flex-end">
+          <Grid container xs={4} justify="flex-end" style={{marginBottom:"50px"}}>
             <Grid item>
               <TextField
                 id="standard-select-currency"
@@ -150,7 +150,7 @@ function Compare({data}) {
             </Grid>
           </Grid>
 
-        <Grid container justify="center" spacing={4}>
+        <Grid container justify="center" spacing={4} style={{marginBottom:"50px"}}>
           <Grid container xs={5} justify="flex-end">
             <Grid item>
               <TextField
@@ -170,7 +170,6 @@ function Compare({data}) {
               </TextField>
             </Grid>
           </Grid>
-        </Grid>
 
           <Grid container xs={5} justify="flex-start">
             <Grid item>
@@ -192,6 +191,8 @@ function Compare({data}) {
             </Grid>
           </Grid>
           </Grid>
+        </Grid>
+
 
           
 
@@ -200,27 +201,31 @@ function Compare({data}) {
               <Button variant="contained" size="large" onClick={handleClick}>SEARCH</Button>
             </div>
           </Grid>
-        <CompareCharts
-          active={active}
-          deaths={deaths}
-          recovered={recovered}
-          value={value}
+        <Grid container justify="center">
+          <Grid item xs={9} justify="center">
+            <CompareCharts
+              active={active}
+              deaths={deaths}
+              recovered={recovered}
+              value={value}
 
-          active1={active1}
-          deaths1={deaths1}
-          recovered1={recovered1}
-          value1={value1}
+              active1={active1}
+              deaths1={deaths1}
+              recovered1={recovered1}
+              value1={value1}
 
-          active2={active2}
-          deaths2={deaths2}
-          recovered2={recovered2}
-          value2={value2}
+              active2={active2}
+              deaths2={deaths2}
+              recovered2={recovered2}
+              value2={value2}
 
-          active3={active3}
-          deaths3={deaths3}
-          recovered3={recovered3}
-          value3={value3}
-        />
+              active3={active3}
+              deaths3={deaths3}
+              recovered3={recovered3}
+              value3={value3}
+            />
+          </Grid>
+        </Grid>
       </div>
       }
     </div>
